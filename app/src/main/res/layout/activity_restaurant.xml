@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.bignerdranch.android.tipcalculator.RestaurantActivity">
+
+    <TextView
+        android:id="@+id/totalBillTextView"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="33dp"
+        android:gravity="center_vertical"
+        android:text="Total Bill (pre-tax)"/>
+
+    <TextView
+        android:id="@+id/tipPercentTextView"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="Tip Percent"
+        android:layout_below="@id/totalBillTextView"/>
+
+    <TextView
+        android:id="@+id/totalTipTextView"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="Total Tip Amount"
+        android:layout_below="@id/tipPercentTextView"/>
+
+    <TextView
+        android:id="@+id/taxTextView"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="Total Tax"
+        android:layout_below="@id/totalTipTextView"/>
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="Grand Total"
+        android:layout_below="@id/taxTextView"/>
+
+    <TextView
+        android:id="@+id/splitTextView"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="How many ways to split?"
+        android:layout_below="@id/totalTextView"/>
+
+    <TextView
+        android:id="@+id/splitAmountTextView"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="Split Amount"
+        android:layout_below="@id/splitTextView"/>
+
+    <EditText
+        android:id="@+id/billEditText"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="33dp"
+        android:layout_alignParentRight="true"
+        android:text="0"/>
+
+    <SeekBar
+        android:id="@+id/tipSeekBar"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/billEditText"/>
+
+    <EditText
+        android:id="@+id/totalTipEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:enabled="false"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:layout_below="@id/tipSeekBar"/>
+
+    <EditText
+        android:id="@+id/taxEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:layout_below="@id/totalTipEditText"/>
+
+    <EditText
+        android:id="@+id/totalEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:enabled="false"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:layout_below="@id/taxEditText"/>
+
+    <Spinner
+        android:id="@+id/splitSpinner"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:entries="@array/split_options"
+        android:layout_below="@id/totalEditText"/>
+
+    <EditText
+        android:id="@+id/splitAmountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:enabled="false"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:layout_below="@id/splitSpinner"/>
+
+</RelativeLayout>

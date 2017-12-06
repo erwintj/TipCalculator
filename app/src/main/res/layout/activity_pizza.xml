@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.bignerdranch.android.tipcalculator.PizzaActivity">
+
+    <TextView
+        android:id="@+id/originalTotal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="33dp"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:text="Original Total"/>
+
+    <EditText
+        android:id="@+id/pizzaEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="33dp"
+        android:text="0"/>
+
+    <RadioGroup
+        android:id="@+id/percentRadioGroup"
+        android:orientation="horizontal"
+        android:layout_below="@id/originalTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/poorRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poor 10%"/>
+
+        <RadioButton
+            android:id="@+id/commonRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/originalTotal"
+            android:text="Common 15%"/>
+
+        <RadioButton
+            android:id="@+id/excellentRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/originalTotal"
+            android:text="Excellent 20%"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/badWeatherCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bad Weather? +$1"
+        android:layout_below="@id/percentRadioGroup"/>
+
+    <CheckBox
+        android:id="@+id/reallyBadWeatherCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Really Bad Weather? +$2"
+        android:layout_below="@id/badWeatherCheckBox"/>
+
+    <CheckBox
+        android:id="@+id/threeMileCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More than 3 miles? +$1"
+        android:layout_below="@id/reallyBadWeatherCheckBox"/>
+
+    <CheckBox
+        android:id="@+id/fiveMileCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More than 5 miles? +$2"
+        android:layout_below="@id/threeMileCheckBox"/>
+
+    <CheckBox
+        android:id="@+id/minimumCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minimum tipping rule. $3"
+        android:layout_below="@id/fiveMileCheckBox"/>
+
+    <CheckBox
+        android:id="@+id/largeOrderCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large order ($100+) tipping rule. Common 10%"
+        android:layout_below="@id/minimumCheckBox"/>
+
+    <TextView
+        android:id="@+id/totalTip"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:text="Total Tip Amount"
+        android:layout_below="@id/largeOrderCheckBox"/>
+
+    <TextView
+        android:id="@+id/grandTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:text="Grand Total"
+        android:layout_below="@id/totalTip"/>
+
+    <EditText
+        android:id="@+id/pizzaTipEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="0"
+        android:enabled="false"
+        android:layout_below="@id/largeOrderCheckBox"
+        android:layout_alignParentRight="true"/>
+
+    <EditText
+        android:id="@+id/pizzaTotalEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="0"
+        android:enabled="false"
+        android:layout_below="@id/totalTip"
+        android:layout_alignParentRight="true"/>
+
+
+
+</RelativeLayout>
